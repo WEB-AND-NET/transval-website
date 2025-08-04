@@ -12,13 +12,11 @@
     @include('partials.spinner')
     <!-- Spinner End -->
 
-    <!-- Navbar & Hero Start -->
+    <!-- Navbar Start -->
     <div class="container-fluid p-0">
-        <!-- Navbar Start -->
         @include('partials.navbar')
-        <!-- Navbar End -->
     </div>
-    <!-- Navbar & Hero End -->
+    <!-- Navbar End -->
 
     
 
