@@ -1427,3 +1427,10 @@
     border: 1px solid rgb(102, 102, 102);
     border-radius: 0.8rem;
 }
+
+.hero-section {
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
