@@ -31,6 +31,23 @@
     </div>
     <!-------- Hero ---------->
 
+    <!----------- about us ------------->
+    <div class="bg-primary d-flex justify-content-center">
+        <div class="col-7" style="color: #ffffff; padding: 8rem 0rem 8rem 0rem;">
+            <h2 class="text-center pb-4" style="color: #ffffff;">Nosotros</h2>
+            <p class="text-center">
+                Transval S&S, desarrolla estrategias logísticas a la medida de los requerimientos de nuestros clientes, con
+                una adecuada
+                administración del riesgo y de los recursos y un enfoque a los resultados planificados; así como, una
+                experiencia grata al
+                obtener las diferentes certificaciones para los sistemas de gestión, y el mantenimiento de estos, aportando
+                al crecimiento y
+                desarrollo organizacional.
+            </p>
+        </div>
+    </div>
+    <!----------- about us ------------->
+
 
     <!---------- JAVASCRIPT ---------->
     @include('partials.footer')
