@@ -5,9 +5,9 @@
             <div class="col-md-4 col-lg-4 col-xl-4">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="mb-4">Comunicate con Nosotros</h4>
-                    <p href=""><i class="fas fa-home me-2"></i>address</p>
-                    <p href=""><i class="fas fa-envelope me-2"></i> example@hotmail.com</p>
-                    <p href=""><i class="fas fa-phone me-2"></i> 555-555-555</p>
+                    <p href=""><i class="fas fa-home me-2"></i>San fernando, cartagena, colombia</p>
+                    <p href=""><i class="fas fa-phone me-2"></i> 3188430092</p>
+                    <p href=""><i class="fas fa-phone me-2"></i> 3016808499</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 col-xl-4">
