@@ -59,48 +59,6 @@
     </div>
     <!-- Carousel End -->
 
-    <!-------- sectin of products grouped by category --------->
-    @foreach ($listOfCategorizedProducts as $productCategory)
-    <section style="padding-top: 4rem" id={{ strtolower($productCategory['name']) }} >
-        <div class="container-fluid product pt-3 pb-1 mt-3">
-            <div class="container-lg">
-                <!------------ category section title ------------>
-                <div class="mx-auto text-center mb-3">
-                    <h3 class="section-title px-3">{{ $productCategory['name'] }}</h3>
-                </div>
-            
-                <div class="row g-4 justify-content-center">
-                    @foreach ($productCategory['products'] as $product)
-                    <!---product---->
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="product-item">
-                            <div class="product-img">
-                                <div class="product-img-inner">
-                                    <img class="custom-product-image" src={{ asset('/storage/' . $product->thumbnail) }}
-                                            alt="Image">
-                                    <div class="product-icon">
-                                        <a href={{ url('/products/' . $product->id . '/details') }} class="my-auto"><i
-                                                    class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-content border border-top-0 rounded-bottom p-4">
-                                <a href={{ url('/products/' . $product->id . '/details') }} class="h4 mb-5"
-                                    style="width: 100%;">{{ $product->title}}</a>
-                                <a href={{ url('/products/' . $product->id . '/details') }}
-                                    class="btn btn-primary rounded-pill py-2 px-4 mt-3 text-light" style="width: 100%;">Mas
-                                    Información</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--- End product---->
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
-    @endforeach
-    <!-------- sectin of products grouped by category --------->
 
     <!---------- JAVASCRIPT ---------->
     @include('partials.footer')
