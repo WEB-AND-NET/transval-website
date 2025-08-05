@@ -27,3 +27,5 @@ Route::get('/contact/form', [MainController::class, 'contactForm']);
 Route::post('/mail/send', [EmailController::class, 'sendClientContactEmail'] );
 
 Route::get('/linea/etica', [MainController::class, 'lineaEtica']);
+
+Route::post("reporte/linea-etica", [EmailController::class, "handleLineaEticaForm"]);
