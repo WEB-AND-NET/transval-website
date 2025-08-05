@@ -25,3 +25,5 @@ Route::get('/products/{id}/details', [MainController::class, 'productDetails']);
 Route::get('/contact/form', [MainController::class, 'contactForm']);
 
 Route::post('/mail/send', [EmailController::class, 'sendClientContactEmail'] );
+
+Route::get('/linea/etica', [MainController::class, 'lineaEtica']);
