@@ -86,11 +86,13 @@ class MainController extends BaseController
         return view('page', ['slug' => $slug, 'page' => $page]);
     }
 
-    public function about(){
+    public function about()
+    {
         return view('about');
     }
 
-    public function contactForm(){
+    public function contactForm()
+    {
         return view('contact-form');
     }
 }
