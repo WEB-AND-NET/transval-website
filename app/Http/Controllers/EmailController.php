@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Mail\NotifyClientEmailReceivedSuccessfully;
 use App\Mail\ClientRequestEmail;
+use App\Mail\LineaEticaReportMail;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
@@ -57,9 +59,24 @@ class EmailController extends BaseController
 
             // take user to same contact form
             return redirect('/contact/form')->with('success', 'Formulario enviado correctamente!');
-        }else {
+        } else {
             // take user to same contact form but include form inputs data
             return redirect('/contact/form')->with('error', 'Porfavor complete el recaptcha para proceder')->withInput($form_data);
         }
+    }
+
+    public function handleLineaEticaForm(Request $request)
+    {
+        // Send mail to business administration
+        Mail::send(new LineaEticaReportMail($_POST));
+
+        $email_denunciante = $request->input("emailDenunciante");
+
+        if(!empty($email_denunciante)){
+            Mail::to(new Address($email_denunciante))->send( new LineaEticaReportMail($_POST));
+        }
+
+        // take user to same contact form
+        return redirect("/linea/etica")->with('success', 'Reporte enviado correctamente!');
     }
 }
