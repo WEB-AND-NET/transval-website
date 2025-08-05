@@ -95,4 +95,9 @@ class MainController extends BaseController
     {
         return view('contact-form');
     }
+
+    public function lineaEtica()
+    {
+        return view('linea-etica');
+    }
 }
