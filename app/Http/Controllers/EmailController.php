@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\NotifyClientEmailReceivedSuccessfully;
 use App\Mail\ClientRequestEmail;
 use App\Mail\LineaEticaReportMail;
+use App\Mail\NotifyLineaEticaReportSendSuccessfully;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Mail\Mailables\Address;
@@ -73,7 +74,8 @@ class EmailController extends BaseController
         $email_denunciante = $request->input("emailDenunciante");
 
         if(!empty($email_denunciante)){
-            Mail::to(new Address($email_denunciante))->send( new LineaEticaReportMail($_POST));
+            Mail::to(new Address($email_denunciante))
+            ->send( new NotifyLineaEticaReportSendSuccessfully($_POST));
         }
 
         // take user to same contact form
