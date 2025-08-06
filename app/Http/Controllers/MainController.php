@@ -100,4 +100,9 @@ class MainController extends BaseController
     {
         return view('linea-etica');
     }
+
+    public function pqrs()
+    {
+        return view("pqrs-page");
+    }
 }
