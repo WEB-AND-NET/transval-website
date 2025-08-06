@@ -18,6 +18,8 @@ use App\Livewire\CreateCustomNavBarOption;
 
 Route::get('/', [MainController::class, 'index']);
 
+Route::get("/page/pqrs", [MainController::class, "pqrs"]);
+
 Route::get('/{slug}', [MainController::class, 'getPageBySlug']);
 
 Route::get('/products/{id}/details', [MainController::class, 'productDetails']);
