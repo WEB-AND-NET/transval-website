@@ -29,14 +29,20 @@
                 <label for="tipoDeReporte">Seleccione el tipo de reporte</label>
                 <select class="form-control" name="tipoDeReporte" id="report-type">
                     <option value="">---</option>
-                    <option value="Operation sospechosa">Operation sospechosa</option>
-                    <option value="Corrupción">Corrupción</option>
-                    <option value="Soborno">Soborno</option>
+                    <option value="Operation sospechosa" {{ old("tipoDeReporte") == "Operation sospechosa" ? "selected" : "" }}>Operation sospechosa</option>
+                    <option value="Corrupción" {{ old("tipoDeReporte") == "Corrupción" ? "selected" : "" }}>Corrupción</option>
+                    <option value="Soborno" {{ old("tipoDeReporte") == "Soborno" ? "selected" : "" }}>Soborno</option>
                 </select>
+                @error("tipoDeReporte")
+                    <p class="text-danger my-2">{{$message}}</p>
+                @enderror
             </div>
             <div class="mb-4">
                 <label for="fecha">Fecha</label>
-                <input class="form-control" type="datetime-local" name="fecha" id="fecha"></input>
+                <input class="form-control" type="datetime-local" name="fecha" id="fecha" value="{{ old("fecha") }}"></input>
+                @error("fecha")
+                    <p class="text-danger my-2">{{$message}}</p>
+                @enderror
             </div>
             <div class="mb-4">
                 <p>
@@ -46,7 +52,10 @@
                 </p>
             </div>
             <div class="mb-4">
-               <textarea class="form-control" cols="10" rows="5" name="descripcion" id="descripcion"></textarea>
+               <textarea class="form-control" cols="10" rows="5" name="descripcion" id="descripcion">{{old("descripcion")}}</textarea>
+                @error("descripcion")
+                    <p class="text-danger my-2">{{$message}}</p>
+                @enderror
             </div>
             <div class="mb-4">
                 <h4 class="text-primary">Información De La Persona Que Reporta (opcional)</h4>

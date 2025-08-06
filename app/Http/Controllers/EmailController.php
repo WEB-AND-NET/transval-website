@@ -68,6 +68,13 @@ class EmailController extends BaseController
 
     public function handleLineaEticaForm(Request $request)
     {
+        // validate form inputs and store successfully validated results in the variable
+        $request->validate([
+            'tipoDeReporte' => ['required'],
+            'fecha' => ['required'],
+            'descripcion' => ['required']
+        ]);
+
         // Send mail to business administration
         Mail::send(new LineaEticaReportMail($_POST));
 
