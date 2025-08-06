@@ -69,23 +69,50 @@ class EmailController extends BaseController
     public function handleLineaEticaForm(Request $request)
     {
         // validate form inputs and store successfully validated results in the variable
-        $request->validate([
+        $form_data = $request->validate([
             'tipoDeReporte' => ['required'],
             'fecha' => ['required'],
             'descripcion' => ['required']
         ]);
 
-        // Send mail to business administration
-        Mail::send(new LineaEticaReportMail($_POST));
+        $recaptcha_response = $request->input('g-recaptcha-response');
 
-        $email_denunciante = $request->input("emailDenunciante");
+        if (is_null($recaptcha_response)) {
+            // take user to same contact form but include form inputs data
+            return redirect("/linea/etica")->with('error', 'Porfavor complete el recaptcha para proceder')->withInput($form_data);
+        };
+
+        $url = "https://www.google.com/recaptcha/api/siteverify";
+
+        $body = [
+            'secret' => config('services.recaptcha.secret'),
+            'response' => $recaptcha_response,
+            'remoteip' => IpUtils::anonymize($request->ip())
+        ];
+
+        // the options set to this form are a workaround, this must not be use in production
+        $response = Http::asForm()->withOptions([
+            'verify' => false,
+        ])->post($url, $body);
+
+        $result = json_decode($response);
+
+        if ($response->successful() && $result->success == true) {
+            // Send mail to business administration
+            Mail::send(new LineaEticaReportMail($_POST));
+
+            $email_denunciante = $request->input("emailDenunciante");
 
         if(!empty($email_denunciante)){
             Mail::to(new Address($email_denunciante))
             ->send( new NotifyLineaEticaReportSendSuccessfully($_POST));
         }
 
-        // take user to same contact form
-        return redirect("/linea/etica")->with('success', 'Reporte enviado correctamente!');
+            // take user to same contact form
+            return redirect("/linea/etica")->with('success', 'Reporte enviado correctamente!');
+        } else {
+            // take user to same contact form but include form inputs data
+            return redirect("/linea/etica")->with('error', 'Porfavor complete el recaptcha para proceder')->withInput($form_data);
+        }
     }
 }

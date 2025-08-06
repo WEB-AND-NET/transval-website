@@ -93,6 +93,20 @@
             <div class="mb-4">
                 <p>Gracias por su tiempo e información</p>
             </div>
+            <!------------- error validation messages ---------->
+            @if (session()->has('success'))
+                <div class="alert alert-success">
+                    <p>{{ session()->get('success') }}</p>
+                </div>
+            @endif
+            @if (session()->has('error'))
+                <div class="alert alert-danger">
+                    <p>{{ session()->get('error') }}</p>
+                </div>
+            @endif
+            <!--------------- recaptcha --------------->
+            <div class="g-recaptcha mb-3" data-sitekey={{config('services.recaptcha.key')}}></div>
+            <!--------------- End recaptcha --------------->
             <div class="mb-4">
                 <button class="btn btn-primary" type="submit">Enviar</button>
             </div>
