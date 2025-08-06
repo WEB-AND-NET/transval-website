@@ -21,7 +21,7 @@
     <!----------- about us ------------->
 
     <div class="container py-4">
-        <h1 class="text-center text-primary">Línea Ética</h1>
+        <h1 class="text-center text-primary my-5">Línea Ética</h1>
 
         <form action="{{ url("reporte/linea-etica") }}" method="POST">
             @csrf
