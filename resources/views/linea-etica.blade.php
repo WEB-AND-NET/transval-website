@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Inicio | {{ env('WEBSITE_TITLE') }}</title>
+    <title>Línea Ética | {{ env('WEBSITE_TITLE') }}</title>
     @include('partials.header')
 </head>
 
