@@ -20,6 +20,8 @@ Route::get('/', [MainController::class, 'index']);
 
 Route::get("/page/pqrs", [MainController::class, "pqrs"]);
 
+Route::post("/process-pqrs", [EmailController::class, "handlePQRS"]);
+
 Route::get('/{slug}', [MainController::class, 'getPageBySlug']);
 
 Route::get('/products/{id}/details', [MainController::class, 'productDetails']);
