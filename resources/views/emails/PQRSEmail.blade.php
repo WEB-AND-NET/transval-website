@@ -30,7 +30,7 @@
             <p><strong>Nombre de quien reporta: </strong>{{ $reportePQRS['nombreReportante'] }}</p>
             <p><strong>Cargo: </strong>{{ $reportePQRS['cargoReportante'] }}</p>
             <p style="margin-bottom: 2rem"><strong>Servicio: </strong>{{ $reportePQRS['nombreServicio'] }}</p>
-            <h4>Descripción de la queja, reclamo o sugerencia</h4>
+            <p><strong>Descripción de la queja, reclamo o sugerencia</strong></p>
             <p>{{ $reportePQRS['texto'] }}</p>
         </article>
     </main>
