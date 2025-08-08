@@ -120,7 +120,7 @@ class EmailController extends BaseController
     public function handlePQRS(Request $request)
     {
         // validate form inputs and store successfully validated results in the variable
-        $request->validate([
+        $form_data = $request->validate([
             "fecha" => ["required"],
             "nombreCliente" => ["required"],
             "nombreReportante" => ["required"],
@@ -129,10 +129,37 @@ class EmailController extends BaseController
             "texto" => ["required"]
         ]);
 
-        // send the email to company
-        Mail::to(env("MAIL_USERNAME"))->send(new PQRS($_POST));
+        $recaptcha_response = $request->input('g-recaptcha-response');
 
-        // take user to same page
-        return redirect("/page/pqrs");
+        if (is_null($recaptcha_response)) {
+            // take user to same contact form but include form inputs data
+            return redirect("/page/pqrs")->with('error', 'Porfavor complete el recaptcha para proceder')->withInput($form_data);
+        };
+
+        $url = "https://www.google.com/recaptcha/api/siteverify";
+
+        $body = [
+            'secret' => config('services.recaptcha.secret'),
+            'response' => $recaptcha_response,
+            'remoteip' => IpUtils::anonymize($request->ip())
+        ];
+
+        // the options set to this form are a workaround, this must not be use in production
+        $response = Http::asForm()->withOptions([
+            'verify' => false,
+        ])->post($url, $body);
+
+        $result = json_decode($response);
+
+        if ($response->successful() && $result->success == true) {
+            // send the email to company
+            Mail::to(env("MAIL_USERNAME"))->send(new PQRS($_POST));
+
+            // take user to same page
+            return redirect("/page/pqrs")->with("success", "Reporte enviado correctamente");
+        } else {
+            // take user to same contact form but include form inputs data
+            return redirect("/page/pqrs")->with('error', 'Porfavor complete el recaptcha para proceder')->withInput($form_data);
+        }
     }
 }
