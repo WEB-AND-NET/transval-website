@@ -129,7 +129,10 @@ class EmailController extends BaseController
             "texto" => ["required"]
         ]);
 
+        // send the email to company
         Mail::to(env("MAIL_USERNAME"))->send(new PQRS($_POST));
+
+        // take user to same page
         return redirect("/page/pqrs");
     }
 }
