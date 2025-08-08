@@ -6,6 +6,7 @@ use App\Mail\NotifyClientEmailReceivedSuccessfully;
 use App\Mail\ClientRequestEmail;
 use App\Mail\LineaEticaReportMail;
 use App\Mail\NotifyLineaEticaReportSendSuccessfully;
+use App\Mail\PQRS;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Mail\Mailables\Address;
@@ -114,5 +115,11 @@ class EmailController extends BaseController
             // take user to same contact form but include form inputs data
             return redirect("/linea/etica")->with('error', 'Porfavor complete el recaptcha para proceder')->withInput($form_data);
         }
+    }
+
+    public function handlePQRS(Request $request)
+    {
+        Mail::to(env("MAIL_USERNAME"))->send(new PQRS($_POST));
+        return redirect("/page/pqrs");
     }
 }
