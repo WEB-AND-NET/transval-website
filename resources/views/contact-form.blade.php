@@ -26,16 +26,14 @@
                 <div class="bg-light rounded p-4">
                     <div class="text-center mb-4">
                         <i class="fa fa-map-marker-alt fa-3x text-primary"></i>
-                        <h4 class="text-primary">
-                            <address></address>
-                        </h4>
-                        <p class="mb-0">address</p>
+                        <h4 class="text-primary">Ubicacion</h4>
+                        <address>San fernando, <br>cartagena, colombia</address>
                     </div>
                     <div class="text-center">
-                        <i class="fa fa-envelope-open fa-3x text-primary mb-3"></i>
-                        <h4 class="text-primary">Email</h4>
-                        <p class="mb-0">email@gmail.com</p>
-                        <p class="mb-0"></p>
+                        <i class="fa fa-phone fa-3x text-primary mb-3"></i>
+                        <h4 class="text-primary">Teléfono</h4>
+                        <p class="mb-0">3188430092</p>
+                        <p class="mb-0">3016808499</p>
                     </div>
                 </div>
             </div>
