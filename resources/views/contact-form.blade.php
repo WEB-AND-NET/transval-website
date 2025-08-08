@@ -22,7 +22,7 @@
 
     <div class="container py-5 d-flex justify-content-center">
         <div class="row">
-            <div class="col-md-6 col-lg-5 mb-5">
+            <div class="col-md-6 col-lg-6 mb-5">
                 <div class="bg-light rounded p-4">
                     <div class="text-center mb-4">
                         <i class="fa fa-map-marker-alt fa-3x text-primary"></i>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-7">
+            <div class="col-md-6 col-lg-6">
                 <h2 class="mb-2">Contactenos</h2>
                 <p class="mb-4">
                     Valoramos tu opinión y la consideramos fundamental para nuestro
