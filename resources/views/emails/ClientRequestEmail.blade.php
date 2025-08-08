@@ -21,8 +21,8 @@
            
         </address>
         <div style="padding-top: 1rem;">
-            <p>Correo: </p>  
-            <p>Correo: </p>
+            <p>Teléfono: 3188430092</p>  
+            <p>Teléfono: 3016808499</p>
         </div>
     </div>
 
