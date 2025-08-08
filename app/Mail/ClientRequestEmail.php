@@ -29,8 +29,6 @@ class ClientRequestEmail extends Mailable
     {
         return new Envelope(
             subject: "Formulario de Contacto | usuarios sitio web " . env('WEBSITE_TITLE'),
-            from: new Address('desarrollador6@softparking.com.co'),
-            to: [new Address('desarrolladorwebandnet6@gmail.com', 'desarrollador')],
             tags: ['inbox']
         );
     }

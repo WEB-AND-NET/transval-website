@@ -54,7 +54,8 @@ class EmailController extends BaseController
 
         if ($response->successful() && $result->success == true) {
             // Send mail to business administration
-            Mail::send(new ClientRequestEmail($_POST));
+            Mail::to(new Address(env("MAIL_USERNAME")))
+                ->send(new ClientRequestEmail($_POST));
 
             // Send response to client
             Mail::to($_POST['client_email'])->send(new NotifyClientEmailReceivedSuccessfully($_POST));
