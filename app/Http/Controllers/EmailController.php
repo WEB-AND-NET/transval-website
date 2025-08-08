@@ -119,6 +119,16 @@ class EmailController extends BaseController
 
     public function handlePQRS(Request $request)
     {
+        // validate form inputs and store successfully validated results in the variable
+        $request->validate([
+            "fecha" => ["required"],
+            "nombreCliente" => ["required"],
+            "nombreReportante" => ["required"],
+            "cargoReportante" => ["required"],
+            "nombreServicio" => ["required"],
+            "texto" => ["required"]
+        ]);
+
         Mail::to(env("MAIL_USERNAME"))->send(new PQRS($_POST));
         return redirect("/page/pqrs");
     }

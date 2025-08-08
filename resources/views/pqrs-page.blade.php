@@ -26,34 +26,51 @@
             @csrf
             <div class="mb-4">
                 <label for="fecha">Fecha</label>
-                <input class="form-control" type="datetime-local" name="fecha" id="fecha">
+                <input class="form-control" type="datetime-local" name="fecha" id="fecha" value="{{ old("fecha") }}">
+                @error("fecha")
+                    <p class="text-danger my-2">{{$message}}</p>
+                @enderror
             </div>
             <div class="mb-4">
                 <label for="nombre-cliente">Cliente</label>
-                <input class="form-control" type="text" name="nombreCliente" id="nombre-cliente">
+                <input class="form-control" type="text" name="nombreCliente" id="nombre-cliente" value="{{ old("nombreCliente") }}">
+                @error("nombreCliente")
+                    <p class="text-danger my-2">{{$message}}</p>
+                @enderror
             </div>
             <div class="mb-4">
                 <label for="nombre-reportante">Nombre de quien reporta</label>
-                <input class="form-control" type="text" name="nombreReportante" id="nombre-reportante">
+                <input class="form-control" type="text" name="nombreReportante" id="nombre-reportante" value="{{ old("nombreReportante") }}">
+                @error("nombreReportante")
+                    <p class="text-danger my-2">{{$message}}</p>
+                @enderror
             </div>
             <div class="mb-4">
                 <label for="cargo-reportante">Cargo</label>
-                <input class="form-control" type="text" name="cargoReportante" id="cargo-reportante">
+                <input class="form-control" type="text" name="cargoReportante" id="cargo-reportante" value="{{ old("cargoReportante") }}">
+                @error("cargoReportante")
+                    <p class="text-danger my-2">{{$message}}</p>
+                @enderror
             </div>
             <div class="mb-4">
                 <label for="nombre-servicio">Seleccione el servicio</label>
                 <select class="form-control" name="nombreServicio" id="nombre-servicio">
                     <option value="">---</option>
-                    <option value="Operación logística">Operación logística</option>
-                    <option value="Implementación de sistemas de gestión">Implementación de sistemas de gestión</option>
-                    <option value="Mantenimiento de los sistemas de gestión">Mantenimiento de los sistemas de gestión
-                    </option>
+                    <option value="Operación logística" {{ old("nombreServicio") == "Operación logística" ? "selected" : "" }}>Operación logística</option>
+                    <option value="Implementación de sistemas de gestión" {{ old("nombreServicio") == "Implementación de sistemas de gestión" ? "selected" : "" }}>Implementación de sistemas de gestión</option>
+                    <option value="Mantenimiento de los sistemas de gestión" {{ old("nombreServicio") == "Mantenimiento de los sistemas de gestión" ? "selected" : ""}}>Mantenimiento de los sistemas de gestión</option>
                 </select>
+                @error("nombreServicio")
+                    <p class="text-danger my-2">{{$message}}</p>
+                @enderror
             </div>
             <div class="mb-4">
                 <p>Describa su petición, queja, reclamo o sugerencia</p>
                 <textarea class="form-control" cols="10" rows="5" name="texto"
-                    placeholder="Escriba su mensaje....."></textarea>
+                    placeholder="Escriba su mensaje.....">{{old("texto")}}</textarea>
+                @error("texto")
+                    <p class="text-danger my-2">{{$message}}</p>
+                @enderror
             </div>
             <div class="mb-4">
                 <button class="btn btn-primary" type="submit">Enviar</button>
