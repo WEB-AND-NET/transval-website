@@ -45,10 +45,6 @@
 </div>
 <!-- Copyright End -->
 
-<!-- whatsapp button link -->
-<a href="https://api.whatsapp.com/send?phone={{ env('MAIN_WHATSAPP_PHONE_NUMBER') }}" class="whatsapp-button">
-    <img src={{ asset('icons/whatsapp-icon.png') }} alt="whatsapp-icon-img">
-</a>
 <!-- Back to Top -->
 <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
     <i class="fa fa-arrow-up"></i>
