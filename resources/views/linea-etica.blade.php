@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Línea Ética | {{ env('WEBSITE_TITLE') }}</title>
+    <title>Línea ética | {{ env('WEBSITE_TITLE') }}</title>
     @include('partials.header')
 </head>
 
@@ -21,7 +21,7 @@
     <!----------- about us ------------->
 
     <div class="container py-4">
-        <h1 class="text-center text-primary my-5">Línea Ética</h1>
+        <h1 class="text-center text-primary my-5">Línea ética</h1>
 
         <form action="{{ url("reporte/linea-etica") }}" method="POST">
             @csrf
@@ -58,7 +58,7 @@
                 @enderror
             </div>
             <div class="mb-4">
-                <h4 class="text-primary">Información De La Persona Que Reporta (opcional)</h4>
+                <h4 class="text-primary">Información de la persona que reporta (opcional)</h4>
             </div>
             <div class="mb-4">
                 <p>
