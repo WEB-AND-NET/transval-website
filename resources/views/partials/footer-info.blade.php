@@ -11,13 +11,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 col-xl-4">
-                <h4 class="mb-4">Siguenos</h4>
-                <div class="footer-item d-flex">
-                    <a class="btn-square btn btn-primary rounded-circle mx-1 my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn-square btn btn-primary rounded-circle mx-1 my-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn-square btn btn-primary rounded-circle mx-1 my-1" href=""><i class="fab fa-instagram"></i></a>
-                    <a class="btn-square btn btn-primary rounded-circle mx-1 my-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                
             </div>
              <div class="col-md-4 col-lg-4 col-xl-4 p-0">
                 <div class="footer-img">
