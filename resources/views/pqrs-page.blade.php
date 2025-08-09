@@ -59,6 +59,7 @@
                     <option value="Operación logística" {{ old("nombreServicio") == "Operación logística" ? "selected" : "" }}>Operación logística</option>
                     <option value="Implementación de sistemas de gestión" {{ old("nombreServicio") == "Implementación de sistemas de gestión" ? "selected" : "" }}>Implementación de sistemas de gestión</option>
                     <option value="Mantenimiento de los sistemas de gestión" {{ old("nombreServicio") == "Mantenimiento de los sistemas de gestión" ? "selected" : ""}}>Mantenimiento de los sistemas de gestión</option>
+                    <option value="Otro" {{ old("nombreServicio") == "Otro" ? "selected" : "" }}>Otro</option>
                 </select>
                 @error("nombreServicio")
                     <p class="text-danger my-2">{{$message}}</p>
