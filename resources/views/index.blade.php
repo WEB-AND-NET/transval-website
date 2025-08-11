@@ -22,10 +22,10 @@
     <div class="hero-section" style="background-image: url({{ asset('img/carousel/carousel-image-1.webp') }}); ">
         <div class="col-sm-12 col-md-5 bg-primary h-100" style="padding: 8rem 6rem 4rem 3rem; opacity: 0.8;">
             <div class="d-flex align-items-center">
-                <div style="color: #ffffff">
+                <hgroup style="color: #ffffff">
                     <h1 style="color: #ffffff">SOLUCIONES EN COMERCIO EXTERIOR</h1>
                     <p class="pt-3">Expertos en operaciones logísticas y sistemas de gestión.</p>
-                </div>
+                </hgroup>
             </div>
         </div>
     </div>
