@@ -23,8 +23,8 @@
         <div class="col-sm-12 col-md-5 bg-primary h-100" style="padding: 8rem 6rem 4rem 3rem; opacity: 0.8;">
             <div class="d-flex align-items-center">
                 <div style="color: #ffffff">
-                    <h1 style="color: #ffffff">SOLUCIONES <br>EN COMERCIO <br>EXTERIOR</h1>
-                    <p class="pt-3">Expertos en operaciones logísticas y <br>sistemas de gestión.</p>
+                    <h1 style="color: #ffffff">SOLUCIONES EN COMERCIO EXTERIOR</h1>
+                    <p class="pt-3">Expertos en operaciones logísticas y sistemas de gestión.</p>
                 </div>
             </div>
         </div>
