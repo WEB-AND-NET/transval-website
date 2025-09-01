@@ -18,6 +18,10 @@ use App\Livewire\CreateCustomNavBarOption;
 
 Route::get('/', [MainController::class, 'index']);
 
+Route::get("/page/pqrs", [MainController::class, "pqrs"]);
+
+Route::post("/process-pqrs", [EmailController::class, "handlePQRS"]);
+
 Route::get('/{slug}', [MainController::class, 'getPageBySlug']);
 
 Route::get('/products/{id}/details', [MainController::class, 'productDetails']);
@@ -25,3 +29,7 @@ Route::get('/products/{id}/details', [MainController::class, 'productDetails']);
 Route::get('/contact/form', [MainController::class, 'contactForm']);
 
 Route::post('/mail/send', [EmailController::class, 'sendClientContactEmail'] );
+
+Route::get('/linea/etica', [MainController::class, 'lineaEtica']);
+
+Route::post("reporte/linea-etica", [EmailController::class, "handleLineaEticaForm"]);

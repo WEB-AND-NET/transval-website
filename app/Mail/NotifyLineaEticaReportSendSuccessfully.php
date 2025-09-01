@@ -8,16 +8,15 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Mail\Mailables\Address;
 
-class ClientRequestEmail extends Mailable
+class NotifyLineaEticaReportSendSuccessfully extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(public array $websiteContactForm)
+    public function __construct(public array $notifycationData)
     {
         //
     }
@@ -28,8 +27,7 @@ class ClientRequestEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: "Formulario de Contacto | usuarios sitio web " . env('WEBSITE_TITLE'),
-            tags: ['inbox']
+            subject: 'Notificación | Reporte Enviado Exitosamente',
         );
     }
 
@@ -39,7 +37,7 @@ class ClientRequestEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.ClientRequestEmail',
+            view: 'emails.NotifyReportSendSuccessfully',
         );
     }
 

@@ -5,19 +5,19 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Mail\Mailables\Address;
 
-class ClientRequestEmail extends Mailable
+class LineaEticaReportMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(public array $websiteContactForm)
+    public function __construct(public array $reporteLineaEtica)
     {
         //
     }
@@ -28,8 +28,10 @@ class ClientRequestEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: "Formulario de Contacto | usuarios sitio web " . env('WEBSITE_TITLE'),
-            tags: ['inbox']
+            subject: 'Linea Etica | Reporte',
+            from: new Address(env("MAIL_USERNAME")),
+            to: [new Address(env("MAIL_USERNAME"))],
+            tags: ["inbox"]
         );
     }
 
@@ -39,7 +41,7 @@ class ClientRequestEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.ClientRequestEmail',
+            view: 'emails.LineaEticaReportMail',
         );
     }
 

@@ -5,19 +5,13 @@
             <div class="col-md-4 col-lg-4 col-xl-4">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="mb-4">Comunicate con Nosotros</h4>
-                    <p href=""><i class="fas fa-home me-2"></i>address</p>
-                    <p href=""><i class="fas fa-envelope me-2"></i> example@hotmail.com</p>
-                    <p href=""><i class="fas fa-phone me-2"></i> 555-555-555</p>
+                    <p href=""><i class="fas fa-home me-2"></i>San fernando, cartagena, colombia</p>
+                    <p href=""><i class="fas fa-phone me-2"></i> 3188430092</p>
+                    <p href=""><i class="fas fa-phone me-2"></i> 3016808499</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 col-xl-4">
-                <h4 class="mb-4">Siguenos</h4>
-                <div class="footer-item d-flex">
-                    <a class="btn-square btn btn-primary rounded-circle mx-1 my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn-square btn btn-primary rounded-circle mx-1 my-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn-square btn btn-primary rounded-circle mx-1 my-1" href=""><i class="fab fa-instagram"></i></a>
-                    <a class="btn-square btn btn-primary rounded-circle mx-1 my-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                
             </div>
              <div class="col-md-4 col-lg-4 col-xl-4 p-0">
                 <div class="footer-img">
@@ -45,10 +39,6 @@
 </div>
 <!-- Copyright End -->
 
-<!-- whatsapp button link -->
-<a href="https://api.whatsapp.com/send?phone={{ env('MAIN_WHATSAPP_PHONE_NUMBER') }}" class="whatsapp-button">
-    <img src={{ asset('icons/whatsapp-icon.png') }} alt="whatsapp-icon-img">
-</a>
 <!-- Back to Top -->
 <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
     <i class="fa fa-arrow-up"></i>
