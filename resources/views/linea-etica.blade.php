@@ -29,7 +29,7 @@
                 <label for="tipoDeReporte">Seleccione el tipo de reporte</label>
                 <select class="form-control" name="tipoDeReporte" id="report-type">
                     <option value="">---</option>
-                    <option value="Operation sospechosa" {{ old("tipoDeReporte") == "Operation sospechosa" ? "selected" : "" }}>Operation sospechosa</option>
+                    <option value="Operación sospechosa" {{ old("tipoDeReporte") == "Operación sospechosa" ? "selected" : "" }}>Operación sospechosa</option>
                     <option value="Corrupción" {{ old("tipoDeReporte") == "Corrupción" ? "selected" : "" }}>Corrupción</option>
                     <option value="Soborno" {{ old("tipoDeReporte") == "Soborno" ? "selected" : "" }}>Soborno</option>
                 </select>
@@ -48,7 +48,7 @@
                 <p>
                     Por favor describa la situación presentada teniendo en consideración
                     los siguientes aspectos: ¿Qué sucedió?, ¿Cuándo sucedió?, ¿Dónde sucedió?,
-                    ¿Quién (es) intervinieron?
+                    ¿Quiénes intervinieron?
                 </p>
             </div>
             <div class="mb-4">
@@ -62,14 +62,14 @@
             </div>
             <div class="mb-4">
                 <p>
-                    Recuerde que “La Línea Ética” es un canal anónimo y confidencial, por lo 
+                    Recuerde que la “Línea ética” es un canal anónimo y confidencial, por lo 
                     que usted no está obligado a suministrarnos ninguno de sus datos de 
-                    contacto. En caso de querer ser contactado por favor diligencie la 
-                    siguiente información. 
+                    contacto. En caso de querer ser contactado, por favor diligencie la 
+                    siguiente información.
                 </p>
             </div>
             <div class="mb-4">
-                <label for="relacionConLaEmpresa">Relacion Con La Empresa</label>
+                <label for="relacionConLaEmpresa">Relaci&oacute;n con la empresa</label>
                 <select class="form-control" name="relacionConLaEmpresa" id="relacionConLaEmpresa">
                     <option value="">---</option>
                     <option value="Colaborador">Colaborador</option>
@@ -83,11 +83,11 @@
                 <input class="form-control" name="nombreDenunciante" id="nombreDenunciante">
             </div>
             <div class="mb-4">
-                <label for="telefonoDenunciante">Telefono</label>
+                <label for="telefonoDenunciante">Tel&eacute;fono</label>
                 <input class="form-control" name="telefonoDenunciante" id="telefonoDenunciante">
             </div>
             <div class="mb-4">
-                <label for="emailDenunciante">E-mail</label>
+                <label for="emailDenunciante">Correo</label>
                 <input class="form-control" name="emailDenunciante" id="emailDenunciante">
             </div>
             <div class="mb-4">

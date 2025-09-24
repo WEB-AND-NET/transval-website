@@ -18,6 +18,11 @@ class MainController extends BaseController
     {
         $categorizedProducts = array();
         $categories = Category::all();
+        $servicesPage = DB::table('pages')
+            ->where('slug', '=', 'servicios')
+            ->where('published', '=', 1)
+            ->limit(1)
+            ->first();
 
         foreach ($categories as $c) {
             // get each category related to the product
@@ -30,7 +35,11 @@ class MainController extends BaseController
             }
         }
 
-        return view('index', ['listOfCategorizedProducts' => $categorizedProducts]);
+        if (!empty($servicesPage)) {
+            $servicesPage->blocks = json_decode($servicesPage->blocks);
+        }
+
+        return view('index', ['listOfCategorizedProducts' => $categorizedProducts, "servicesPage" => $servicesPage]);
     }
 
     public function productDetails(string $id)

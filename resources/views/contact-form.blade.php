@@ -26,8 +26,8 @@
                 <div class="bg-light rounded p-4">
                     <div class="text-center mb-4">
                         <i class="fa fa-map-marker-alt fa-3x text-primary"></i>
-                        <h4 class="text-primary">Ubicacion</h4>
-                        <address>San fernando, <br>cartagena, colombia</address>
+                        <h4 class="text-primary">Ubicaci&oacute;n</h4>
+                        <address>San Fernando, <br>Cartagena, Colombia.</address>
                     </div>
                     <div class="text-center">
                         <i class="fa fa-phone fa-3x text-primary mb-3"></i>
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-6">
-                <h2 class="mb-2">Contactenos</h2>
+                <h2 class="mb-2">Cont&aacute;ctenos</h2>
                 <p class="mb-4">
                     Valoramos tu opinión y la consideramos fundamental para nuestro
                     crecimiento y mejora continua en calidad y servicio
@@ -101,7 +101,7 @@
                         <div class="g-recaptcha mb-3" data-sitekey={{config('services.recaptcha.key')}}></div>
                         <!--------------- End recaptcha --------------->
                         <div class="col-12 mb-3">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensaje</button>
+                            <button class="btn btn-primary w-100 py-3" type="submit">Enviar mensaje</button>
                         </div>
                     </div>
                 </form>
