@@ -4,8 +4,8 @@
         <div class="row g-5">
             <div class="col-md-4 col-lg-4 col-xl-4">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="mb-4">Comunicate con Nosotros</h4>
-                    <p href=""><i class="fas fa-home me-2"></i>San fernando, cartagena, colombia</p>
+                    <h4 class="mb-4">Comun&iacute;cate con nosotros</h4>
+                    <p href=""><i class="fas fa-home me-2"></i>San Fernando, Cartagena, Colombia.</p>
                     <p href=""><i class="fas fa-phone me-2"></i> 3188430092</p>
                     <p href=""><i class="fas fa-phone me-2"></i> 3016808499</p>
                 </div>
