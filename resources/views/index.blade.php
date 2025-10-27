@@ -23,7 +23,7 @@
         <div class="col-sm-12 col-md-5 bg-primary h-100" style="padding: 8rem 6rem 4rem 3rem; opacity: 0.8;">
             <div class="d-flex align-items-center">
                 <hgroup style="color: #ffffff">
-                    <h1 style="color: #ffffff">SOLUCIONES SISTEMAS DE GESTIÓN Y OPERACIONES LOGÍSTICAS</h1>
+                    <h1 style="color: #ffffff">SOLUCIONES EN LOGÍSTICA & SISTEMAS DE GESTIÓN</h1>
                     {{-- <p class="pt-3">Expertos en operaciones logísticas y sistemas de gestión.</p> --}}
                 </hgroup>
             </div>
